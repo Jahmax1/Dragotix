@@ -29,3 +29,35 @@ DragonTix is a full-stack event ticketing platform built with React, Node.js, Ex
 - **Deployment**: (Add deployment details if applicable, e.g., Vercel for frontend, Render for backend)
 
 ## Project Structure
+dragontix/
+├── client/                   # Frontend (React app)
+│   ├── src/
+│   │   ├── components/       # Reusable components (e.g., ProtectedRoute, RoleProtectedRoute)
+│   │   ├── context/          # React Context (e.g., AuthContext for authentication)
+│   │   ├── pages/            # Page components (e.g., Login, Register, Dashboard)
+│   │   ├── api.js            # Axios instance for API requests
+│   │   ├── App.jsx           # Main app component with routing
+│   │   ├── index.js          # Entry point for React app
+│   │   └── index.css         # Global styles (Tailwind CSS)
+├── server/                   # Backend (Node.js/Express app)
+│   ├── models/               # Mongoose models (e.g., User, Event, Ticket)
+│   ├── routes/               # API routes (e.g., auth, events, tickets)
+│   ├── middleware/           # Middleware (e.g., auth middleware for JWT)
+│   ├── config/               # Configuration (e.g., database connection)
+│   ├── server.js             # Main server file
+│   └── .env                  # Environment variables (e.g., MongoDB URI, Stripe key)
+├── README.md                 # Project documentation
+└── package.json              # Root-level dependencies and scripts
+
+
+## Prerequisites
+- Node.js (v16 or later)
+- MongoDB (local instance or MongoDB Atlas)
+- Stripe account (for test mode payment integration)
+
+## Setup Instructions
+
+### 1. Clone the Repository
+```bash
+git clone https://github.com/your-username/dragontix.git
+cd dragontix
