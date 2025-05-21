@@ -14,7 +14,7 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/dragontix
   .catch(err => console.error('❌ MongoDB Connection Error:', err));
 
 app.use(cors({
-  origin: 'https://dragontix.vercel.app',
+  origin: '*',
   credentials: true,
 }));
 app.use(express.json());
