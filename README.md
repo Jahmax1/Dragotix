@@ -61,3 +61,14 @@ dragontix/
 ```bash
 git clone https://github.com/your-username/dragontix.git
 cd dragontix
+
+## Deployment
+
+### Live URLs
+- **Frontend**: [https://dragontix-new.vercel.app](https://dragontix-new.vercel.app)
+- **Backend**: [https://dragontix-backend-new.onrender.com](https://dragontix-backend-new.onrender.com)
+
+### Deployment Notes
+- The frontend is hosted on Vercel, and the backend is hosted on Render.
+- MongoDB Atlas is used for the database.
+- Redeployment completed on May 21, 2025, at 07:03 PM +04.
