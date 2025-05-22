@@ -9,12 +9,12 @@ const ticketVerificationRoutes = require('./routes/ticketVerification');
 
 const app = express();
 
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/dragontix')
+mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost:27017/dragontix')
   .then(() => console.log('✅ MongoDB Connected'))
   .catch(err => console.error('❌ MongoDB Connection Error:', err));
 
 app.use(cors({
-  origin: 'https://dragotix.vercel.app/login',
+  origin: 'https://dragotix.vercel.app',
   credentials: true,
 }));
 app.use(express.json());
