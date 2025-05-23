@@ -13,17 +13,8 @@ mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost:27017/dragontix')
   .then(() => console.log('✅ MongoDB Connected'))
   .catch(err => console.error('❌ MongoDB Connection Error:', err));
 
-// Allow requests from both local and production origins
-const allowedOrigins = ['http://localhost:3000', 'https://dragotix.vercel.app'];
 app.use(cors({
-  origin: (origin, callback) => {
-    // Allow requests with no origin (e.g., Postman) or if the origin is in the allowed list
-    if (!origin || allowedOrigins.includes(origin)) {
-      callback(null, true);
-    } else {
-      callback(new Error('Not allowed by CORS'));
-    }
-  },
+  origin: 'https://dragotix.vercel.app',
   credentials: true,
 }));
 app.use(express.json());
