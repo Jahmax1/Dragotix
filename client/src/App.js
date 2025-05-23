@@ -12,6 +12,15 @@ import AdminDashboard from './pages/AdminDashboard';
 import CreateEvent from './pages/CreateEvent';
 import TicketVerification from './pages/TicketVerification';
 
+// Simple NotFound component for 404 routes
+const NotFound = () => (
+  <div style={{ textAlign: 'center', padding: '50px' }}>
+    <h1>404 - Page Not Found</h1>
+    <p>The page you're looking for doesn't exist.</p>
+    <a href="/">Go to Home</a>
+  </div>
+);
+
 export default function App() {
   return (
     <Router>
@@ -32,6 +41,8 @@ export default function App() {
               <Route path="/verify-tickets/:eventId" element={<TicketVerification />} />
             </Route>
           </Route>
+          {/* Catch-all route for 404 */}
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </AuthProvider>
     </Router>
